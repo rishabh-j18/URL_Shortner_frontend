@@ -85,7 +85,7 @@ function CreateLinkPage() {
         customAlias: useCustomAlias ? customAlias : undefined,
         expirationDate: useExpiration ? expirationDate : undefined,
       });
-      if (result.status === 200) {
+      if (result.status === 201) {
         setShortUrl(result.data.shortUrl || "");
         setSuccess(true);
       } else {
