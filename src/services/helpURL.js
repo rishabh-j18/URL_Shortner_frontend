@@ -1,0 +1,1 @@
+export const BACKEND_URL = 'https://url-shortner-pr35.onrender.com';
