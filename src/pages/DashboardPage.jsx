@@ -70,7 +70,6 @@ function DashboardPage() {
     try {
       setLoading(true);
       const data = await linkService.getLinks();
-      console.log(data);
       setLinks(data);
     } catch (error) {
       console.error("Error fetching links:", error);
