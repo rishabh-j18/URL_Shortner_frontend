@@ -29,7 +29,7 @@ export const linkService = {
       const response = await apiRequest(`${BACKEND_URL}/${shortCode}`,'GET');
       console.log(shortCode)
       console.log(response)
-      return response.data;
+      return response;
     } catch (err) {
       throw new Error(err.message || "Failed to authenticate")
     }
