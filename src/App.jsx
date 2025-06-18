@@ -34,7 +34,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/:shortCode" element={<RedirectPage />} />
+        <Route path="/path/:shortCode" element={<RedirectPage />} />
       </Routes>
     </>
   )
