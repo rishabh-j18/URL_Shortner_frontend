@@ -64,12 +64,13 @@ function DashboardPage() {
   const navigate = useNavigate();
   const itemsPerPage = 5;
 
+
   // Fetch links with useCallback to prevent unnecessary re-renders
   const fetchLinks = useCallback(async () => {
     try {
       setLoading(true);
       const data = await linkService.getLinks();
-      console.log(window.location.origin);
+      console.log(data);
       setLinks(data);
     } catch (error) {
       console.error("Error fetching links:", error);
@@ -275,7 +276,7 @@ function DashboardPage() {
                                 size="small"
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  window.open(link.shortUrl, "_blank");
+                                  window.open(link.shortUrl);
                                 }}
                               >
                                 <OpenInNewIcon fontSize="small" />

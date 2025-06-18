@@ -26,6 +26,7 @@ function RedirectPage() {
         }, 100)
 
         const result = await linkService.resolveLink(shortCode)  // Fetch link from backend
+        console.log(result);
         setTimeout(() => {
           clearInterval(progressInterval)
           setProgress(100)

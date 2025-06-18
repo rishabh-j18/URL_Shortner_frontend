@@ -89,7 +89,6 @@ function CreateLinkPage() {
         setShortUrl(result.data.shortUrl || "");
         setSuccess(true);
       } else {
-        console.dir(result)
         setError(result.message?.message||result.message || "Failed to create short URL")
         setSuccess(false);
       }
